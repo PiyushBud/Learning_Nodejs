@@ -1,0 +1,123 @@
+*{
+    font-family: sans-serif;
+}
+img {
+    width: 100px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #113f67;
+    align-items: center;
+    margin: 0;
+    background-attachment: fixed;
+    display: flex;
+  }
+
+  small{
+    font-size: smaller;
+    margin: 0px;
+  }
+
+  label{
+    float: left;
+    margin-left: 10px;
+  }
+
+  ul{
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  li {
+    margin: 3px;
+    margin-left: 15px;
+  }
+
+  #bodyDiv{
+    flex: 1;
+    margin: 40px;
+    background-color: #38598b;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 10px;
+    height: 100%;
+  }
+
+  #titleDiv {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #a2a8d3;
+    border-radius: 5px;
+    min-width: 200px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  #inputDiv{
+    display: flex;
+  }
+
+  #buttonsDiv{
+    margin-bottom: 10px;
+  }
+
+  #inputBox{
+    scale: 1;
+    flex: 1;
+    width: 75%;
+    vertical-align: middle;
+    margin: 10px;
+    
+  }
+
+  #addButton{
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  li.listElement {
+    display: flex;
+    background-color: #e7eaf6;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  p.listText{
+    margin: 3px;
+    margin-left: 15px;
+  }
+
+  li.listElement:nth-child(odd){
+    background-color: #eae6ff;
+  }
+
+  li.listElement:hover{
+    background-color: #ccc0eb;
+  }
+
+  li.crossed{
+    display: flex;
+    background-color: #808080;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 5px;
+    margin: 5px;
+    text-decoration: line-through;
+  }
