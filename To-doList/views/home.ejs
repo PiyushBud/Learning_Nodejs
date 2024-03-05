@@ -8,9 +8,8 @@
   <body>
     <div id="bodyDiv">
       <div id="titleDiv">
-        <h2>To-Do List</h2>
+        <h2><%= locals.user || ''%>To-Do List</h2>
         <small>Click to cross off</small>
-        <small>Double click to remove</small>
         <div id="inputDiv">
           <input id="inputBox" name="inputBox" placeholder="New task" />
           <button id="addButton">Add</button>
@@ -18,6 +17,7 @@
         <div id="buttonsDiv">
           <button id="delButton">Delete Done</button>
           <button id="saveButton">Save</button>
+          <button id="testButton">To Server</button>
         </div>
       </div>
 

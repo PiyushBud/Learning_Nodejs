@@ -1,3 +1,4 @@
+// Add new list element
 function addListItem(){
 
     if (inputBox.value == ""){
@@ -20,6 +21,7 @@ function addListItem(){
     inputBox.value = "";
 }
 
+// Flip list element from crossed to uncrossed
 function flipListElement(e){
     element = e.target;
     if (element.className == "crossed"){
@@ -30,16 +32,22 @@ function flipListElement(e){
     }
 }
 
+
+// Configure list elements
 let taskList = document.getElementsByClassName("listElement");
 
 for (let i = 0; i < taskList.length; i++){
     taskList[i].addEventListener("click", flipListElement);
 }
 
+
+// Configure add button
 let addButton = document.getElementById("addButton");
 
 addButton.addEventListener("click", addListItem);
 
+
+// Configure user input box
 var inputBox = document.getElementById("inputBox");
 inputBox.addEventListener("keypress", function(e){
     if(e.key == "Enter"){
@@ -48,6 +56,7 @@ inputBox.addEventListener("keypress", function(e){
     }
 });
 
+// Configure delete button
 let delButton = document.getElementById("delButton");
 
 delButton.addEventListener("click", function(){
@@ -57,4 +66,17 @@ delButton.addEventListener("click", function(){
         console.log("element: " + crossedList[0]);
         crossedList[0].remove();
     }
+});
+
+let testButton = document.getElementById("testButton");
+
+testButton.addEventListener('click', function(){
+    const dataToSend = {key: 'nice test'};
+    fetch('http://localhost:3000/sql', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json', // Specify content type
+          },
+        body: JSON.stringify(dataToSend), // Convert data to JSON string
+    })
 });
