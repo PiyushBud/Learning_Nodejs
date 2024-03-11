@@ -12,9 +12,6 @@ app.get('/', (req, res) =>{
     res.render('home')
 });
 
-const sqlRouter = require('./routes/sql');
-app.use('/sql', sqlRouter);
-
 const userRouter = require('./routes/users');
 app.use('/users', userRouter);
 
