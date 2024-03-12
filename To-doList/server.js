@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json())
 
 app.get('/', (req, res) =>{
-    res.render('home')
+    res.render('login')
 });
 
 const userRouter = require('./routes/users');

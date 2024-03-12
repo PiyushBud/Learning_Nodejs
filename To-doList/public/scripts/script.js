@@ -78,5 +78,5 @@ testButton.addEventListener('click', function(){
             'Content-Type': 'application/json', // Specify content type
           },
         body: JSON.stringify(dataToSend), // Convert data to JSON string
-    })
+    });
 });

@@ -6,7 +6,7 @@ const mySQL = require('mysql');
 const conn = mySQL.createConnection({
     host: "to-do-list-db.c3uuui20uizj.us-east-1.rds.amazonaws.com",
     user: "admin",
-    password: "HoloBolo",
+    password: "fake pass",
     port: "3306",
     database: "TodoDB"
 });
