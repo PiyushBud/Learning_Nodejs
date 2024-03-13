@@ -48,7 +48,7 @@ addButton.addEventListener("click", addListItem);
 
 
 // Configure user input box
-var inputBox = document.getElementById("inputBox");
+let inputBox = document.getElementById("inputBox");
 inputBox.addEventListener("keypress", function(e){
     if(e.key == "Enter"){
         e.preventDefault();

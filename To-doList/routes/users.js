@@ -4,8 +4,8 @@ const router = express.Router();
 const mySQL = require('mysql');
 
 const conn = mySQL.createConnection({
-    host: "to-do-list-db.c3uuui20uizj.us-east-1.rds.amazonaws.com",
-    user: "admin",
+    host: "AWS RDS",
+    user: "fake user",
     password: "fake pass",
     port: "3306",
     database: "TodoDB"
@@ -71,14 +71,40 @@ async function dbSetUp() {
     }
 }
 
+function checkUser(user){
+    return new Promise((resolve, reject) => {
+        conn.query("SELECT username FROM users WHERE username = '" + user + "'", (err, result) => {
+
+        });
+    });
+}
+
+function addUser(user){
+    return new Promise((resolve, reject) =>{
+        conn.query("INSERT INTO users(username) VALUES (" + user + ")", (err, result) =>{
+
+        });
+    });
+}
+
 dbSetUp(); // Ensure DB is properly set up
 
+router.get('/:username', (req, res) =>{
+    const userText = req.params.username + `'s `;
+    res.render('home', {user: userText});
+});
+
 router.post('/:username', (req, res) => {
-    console.log(req.params.userId);
+    const user = req.params.username;
+    const sql = "INSERT INTO users(username) VALUES (" + user + ")" ;
+
+    conn.query(sql, (err, result) =>{
+
+    });
+
 });
 
 router.put('/:username/sql', (req, res) => {
-    console.log(req.params.userId);
     console.log("create db");
 });
 

@@ -7,12 +7,12 @@
 
   <body>
     <div id="bodyDiv">
-      <div id="titleDiv">
+      <div class="titleDiv">
         <h2><%= locals.user || ''%>To-Do List</h2>
         <small>Click to cross off</small>
         <div id="inputDiv">
-          <input id="inputBox" name="inputBox" placeholder="New task" />
-          <button id="addButton">Add</button>
+          <input class="inputBox" id="inputBox" placeholder="New task" />
+          <button class="labelButton" id="addButton">Add</button>
         </div>
         <div id="buttonsDiv">
           <button id="delButton">Delete Done</button>
@@ -21,13 +21,8 @@
         </div>
       </div>
 
-      <ul id="list">
-        <li class="listElement"><p class="listText">test1</p></li>
-        <li class="listElement"><p class="listText">test2</p></li>
-        <li class="listElement"><p class="listText">test3</p></li>
-        <li class="listElement"><p class="listText">test4</p></li>
-      </ul>
+      <ul id="list"></ul>
     </div>
   </body>
-  <script src="/scripts/script.js"></script>
+  <script src="/scripts/home.js"></script>
 </html>

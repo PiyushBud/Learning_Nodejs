@@ -43,27 +43,21 @@ img {
     margin-left: 15px;
   }
 
+  #loginDiv{
+    margin-bottom: 50px;
+  }
+
   #bodyDiv{
     flex: 1;
     margin: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #38598b;
     border: 1px solid;
     border-color: black;
     border-radius: 10px;
     height: 100%;
-  }
-
-  #titleDiv {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    background-color: #a2a8d3;
-    border-radius: 5px;
-    min-width: 200px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
   }
 
   #inputDiv{
@@ -74,7 +68,7 @@ img {
     margin-bottom: 10px;
   }
 
-  #inputBox{
+  input.inputBox{
     scale: 1;
     flex: 1;
     width: 75%;
@@ -83,11 +77,24 @@ img {
     
   }
 
-  #addButton{
+  button.labelButton{
     height: fit-content;
     margin-top: 10px;
     margin-left: 0px;
     margin-right: 15px;
+  }
+
+  div.titleDiv {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #a2a8d3;
+    border-radius: 5px;
+    min-width: 200px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   li.listElement {
